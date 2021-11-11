@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lo_menu/Screens/Splash/splash_screen.dart';
+import 'package:lo_menu/Screens/widgets/header_widget.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -91,7 +93,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Container(
                   alignment: Alignment.bottomLeft,
                   child: const Text(
-                    "Restaurante Madero",
+                    "Meu Perfil Teste",
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.white,
@@ -101,18 +103,99 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               ListTile(
                 leading: Icon(
-                  Icons.screen_lock_landscape_rounded,
+                  Icons.logout_rounded,
                   size: _drawerIconSize,
                   color: Theme.of(context).accentColor,
                 ),
                 title: Text(
-                  'Splash Screen',
+                  'Sair da conta',
                   style: TextStyle(
                       fontSize: 17, color: Theme.of(context).accentColor),
                 ),
-              )
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              SplashScreen(title: "Splash Screen")));
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.history_rounded,
+                  size: _drawerIconSize,
+                  color: Theme.of(context).accentColor,
+                ),
+                title: Text(
+                  'Histórico',
+                  style: TextStyle(
+                      fontSize: 17, color: Theme.of(context).accentColor),
+                ),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.credit_card_rounded,
+                  size: _drawerIconSize,
+                  color: Theme.of(context).accentColor,
+                ),
+                title: Text(
+                  'Formas de Pagamento',
+                  style: TextStyle(
+                      fontSize: 17, color: Theme.of(context).accentColor),
+                ),
+                onTap: () {},
+              ),
             ],
           ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Container(
+              height: 100,
+              child: HeaderWidget(100, false, Icons.house_rounded),
+            ),
+            Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(25, 10, 25, 10),
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(width: 5, color: Colors.white),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 20,
+                              offset: Offset(5, 5))
+                        ]),
+                    child: Icon(Icons.person,
+                        size: 80, color: Colors.grey.shade300),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    'Meu Perfil Teste',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Usuário padrão',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
