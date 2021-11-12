@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lo_menu/Screens/Menu/menu_screen.dart';
 import 'package:lo_menu/Screens/Profile/profile_page.dart';
 import 'package:lo_menu/Screens/widgets/header_widget.dart';
 import 'package:lo_menu/common/theme_helper.dart';
@@ -84,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ProfilePage()));
+                                        builder: (context) => MenuScreen()));
                               },
                             )),
                         Container(
