@@ -21,30 +21,59 @@ class Body extends StatelessWidget {
           ),
         ),
         Categories(),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: EdgeInsets.all(20.0),
-              height: 180,
-              width: 160,
-              decoration: BoxDecoration(
-                  color: products[0].color,
-                  borderRadius: BorderRadius.circular(16)),
-              child: Image.asset(products[0].imagem),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              child: Text(
-                products[0].titulo,
-                style: TextStyle(color: Colors.black45),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                  childAspectRatio: 0.75),
+              itemBuilder: (context, index) => ItemCard(
+                product: products[index],
               ),
             ),
-            Text(
-              '\$24.36',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
-          ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class ItemCard extends StatelessWidget {
+  final Product product;
+  const ItemCard({
+    Key? key,
+    required this.product,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Expanded(
+          child: Container(
+            padding: EdgeInsets.all(20.0),
+            //height: 140,
+            //width: 130,
+            decoration: BoxDecoration(
+                color: product.color, borderRadius: BorderRadius.circular(16)),
+            child: Image.asset(product.imagem),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5),
+          child: Text(
+            product.titulo,
+            style: TextStyle(color: Colors.black45),
+          ),
+        ),
+        Text(
+          '\$${product.preco}',
+          style: TextStyle(fontWeight: FontWeight.bold),
         )
       ],
     );
