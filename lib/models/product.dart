@@ -60,4 +60,5 @@ List<Product> products = [
       color: Colors.red.shade600),
 ];
 
-String dummyText = "Texto teste só pra testar os testes testados";
+String dummyText =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan justo mauris, id consectetur erat lobortis eget. Sed eu lectus sit amet diam interdum facilisis.";
