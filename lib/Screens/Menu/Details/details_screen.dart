@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lo_menu/Screens/Menu/Details/components/body.dart';
-import 'package:lo_menu/models/product.dart';
+import 'package:lo_menu/shared/models/product.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;

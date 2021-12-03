@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lo_menu/models/product.dart';
+import 'package:lo_menu/shared/models/product.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({

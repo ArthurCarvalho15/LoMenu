@@ -1,27 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:lo_menu/Screens/Splash/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(LoMenu());
-}
+import 'lomenu.dart';
+import 'package:lo_menu/shared/services/auth_services.dart';
+import 'package:provider/provider.dart';
 
-class LoMenu extends StatelessWidget {
-  final Color _primaryColor = HexColor('#F2D096');
-  final Color _accentColor = HexColor('#CD6701');
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Lomenu',
-      theme: ThemeData(
-        primaryColor: _primaryColor,
-        accentColor: _accentColor,
-        scaffoldBackgroundColor: Colors.grey.shade100,
-        primarySwatch: Colors.grey,
-      ),
-      home: SplashScreen(title: "LoMenu"),
-    );
-  }
+  await Firebase.initializeApp();
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (context) => AuthService())],
+    child: LoMenu(),
+  ));
 }

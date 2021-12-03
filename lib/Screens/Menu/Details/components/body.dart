@@ -3,7 +3,7 @@ import 'package:lo_menu/Screens/Menu/Details/components/add_to_cart.dart';
 import 'package:lo_menu/Screens/Menu/Details/components/cart_counter.dart';
 import 'package:lo_menu/Screens/Menu/Details/components/counter_with_fav_btn.dart';
 import 'package:lo_menu/Screens/Menu/Details/components/product_title_with_image.dart';
-import 'package:lo_menu/models/product.dart';
+import 'package:lo_menu/shared/models/product.dart';
 
 import 'descricao.dart';
 

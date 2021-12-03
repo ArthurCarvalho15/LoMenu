@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lo_menu/Screens/Menu/body.dart';
+import 'package:lo_menu/Screens/Menu/components/body.dart';
 import 'package:lo_menu/Screens/Profile/profile_page.dart';
 
 class MenuScreen extends StatefulWidget {

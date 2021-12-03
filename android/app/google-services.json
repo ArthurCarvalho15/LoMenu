@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "636396443109",
+    "project_id": "lomenu-c9183",
+    "storage_bucket": "lomenu-c9183.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636396443109:android:ede2bc9e4916e2092f0b0c",
+        "android_client_info": {
+          "package_name": "com.lumenu.lumenu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636396443109-o5u6jrdlrmmq885s4glmknfqd03hrn4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0AXpOa5HY6NswlGxuiFpPhAv4rKHe7dY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636396443109-o5u6jrdlrmmq885s4glmknfqd03hrn4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
