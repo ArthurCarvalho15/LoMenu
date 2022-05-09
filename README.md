@@ -1,6 +1,6 @@
-# lo_menu
+# lu_menu
 
-Projeto dedicado ao aplicativo de cardápio digital LoMenu
+Projeto dedicado ao aplicativo de cardápio digital LuMenu.
 
 ## Getting Started
 
