@@ -1,6 +1,6 @@
 # lu_menu
 
-Projeto dedicado ao aplicativo de cardápio digital LuMenu.
+Projeto dedicado ao aplicativo de cardápio digital LuMenu para o Trabalho de Conclusão de Curso do curso de Ciência da Computação do Centro Univesitário de Brasília.
 
 ## Getting Started
 
